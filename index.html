@@ -45,7 +45,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="null" class="js-avatar">
+			<img src="/xiaohuang.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Jimmy Wang</a></h1>
@@ -81,7 +81,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/BeJimmy" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -105,7 +105,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="null" class="js-avatar">
+				<img src="/xiaohuang.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Jimmy Wang</h1>
@@ -124,7 +124,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/BeJimmy" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -157,6 +157,82 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/29/html/">html</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/29/html/" class="archive-article-date">
+  	<time datetime="2017-06-29T02:11:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DOM元素不显示"><a href="#DOM元素不显示" class="headerlink" title="DOM元素不显示"></a>DOM元素不显示</h1><ol>
+<li>display:none</li>
+<li>visibility:hidden(即使不可见的元素也会占据页面上的空间)</li>
+<li>设置宽高为0，设置透明度为0</li>
+</ol>
+<hr>
+<h1 id="行内元素的padding和margin可设置吗？"><a href="#行内元素的padding和margin可设置吗？" class="headerlink" title="行内元素的padding和margin可设置吗？"></a>行内元素的padding和margin可设置吗？</h1><p>宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)都不可改变（也就是padding和margin的left和right是可以设置的），就是里面文字或图片的大小。</p>
+<hr>
+<h1 id="rgba-和opacity的透明效果有什么不同？"><a href="#rgba-和opacity的透明效果有什么不同？" class="headerlink" title="rgba()和opacity的透明效果有什么不同？"></a>rgba()和opacity的透明效果有什么不同？</h1><p>rgba()和opacity都能实现透明效果，但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度，<br>而rgba()只作用于元素的颜色或其背景色。（设置rgba透明的元素的子元素不会继承透明效果！）<br>opacity:0 是透明<br>background:rgba(r,g,b,0)是透明</p>
+<hr>
+<h1 id="如何垂直居中一个"><a href="#如何垂直居中一个" class="headerlink" title="如何垂直居中一个"></a>如何垂直居中一个<img></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#container     //&lt;img&gt;的容器设置如下</div><div class="line">&#123;</div><div class="line">    display:table-cell;</div><div class="line">    text-align:center;</div><div class="line">    vertical-align:middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="两种盒子模型"><a href="#两种盒子模型" class="headerlink" title="两种盒子模型"></a>两种盒子模型</h1><ol>
+<li>IE盒子模型<br>width属性值是border+padding+content</li>
+<li>W3C盒子模型<br>width属性值是content</li>
+</ol>
+<hr>
+<h1 id="html语义化是什么？"><a href="#html语义化是什么？" class="headerlink" title="html语义化是什么？"></a>html语义化是什么？</h1><p>当页面样式加载失败的时候能够让页面呈现出清晰的结构<br>有利于seo优化，利于被搜索引擎收录（更便于搜索引擎的爬虫程序来识别）<br>便于项目的开发及维护，使html代码更具有可读性，便于其他设备解析。</p>
+<hr>
+<h1 id="Doctype的作用？严格模式与混杂模式的区别？"><a href="#Doctype的作用？严格模式与混杂模式的区别？" class="headerlink" title="Doctype的作用？严格模式与混杂模式的区别？"></a>Doctype的作用？严格模式与混杂模式的区别？</h1><p>&lt;!DOCTYPE html&gt;<br>&lt;!DOCTYPE&gt;用于告知浏览器该以何种模式来渲染文档<br>严格模式下：页面排版及JS解析是以该浏览器支持的最高标准来执行<br>混杂模式：不严格按照标准执行，主要用来兼容旧的浏览器，向后兼容</p>
+<hr>
+<h1 id="HTML与XHTML——二者有什么区别？"><a href="#HTML与XHTML——二者有什么区别？" class="headerlink" title="HTML与XHTML——二者有什么区别？"></a>HTML与XHTML——二者有什么区别？</h1><ol>
+<li>XHTML 元素必须被正确地嵌套。</li>
+<li>XHTML 元素必须被关闭。</li>
+<li>标签名必须用小写字母。</li>
+<li>XHTML 文档必须拥有根元素。<html></html></li>
+</ol>
+<hr>
+<h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><p>p:nth-child(odd)奇数 (even)偶数<br>a[rel=”abc”]属性选择器</p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/29/html/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
