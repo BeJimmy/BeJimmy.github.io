@@ -41,11 +41,11 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #0B409C"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/xiaohuang.jpg" class="js-avatar">
+			<img src="/img/xiaohuang.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Jimmy Wang</a></h1>
@@ -98,14 +98,14 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #0B409C"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/xiaohuang.jpg" class="js-avatar">
+				<img src="/img/xiaohuang.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Jimmy Wang</h1>
@@ -158,6 +158,78 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/29/js/">js</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/29/js/" class="archive-article-date">
+  	<time datetime="2017-06-29T07:13:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="typeof-有6种返回值"><a href="#typeof-有6种返回值" class="headerlink" title="typeof 有6种返回值"></a>typeof 有6种返回值</h1><ol>
+<li>num</li>
+<li>string</li>
+<li>boolean</li>
+<li>object</li>
+<li>function</li>
+<li>undefined<br>返回值的类型都是string</li>
+</ol>
+<hr>
+<h1 id="事件绑定和普通事件有什么区别"><a href="#事件绑定和普通事件有什么区别" class="headerlink" title="事件绑定和普通事件有什么区别"></a>事件绑定和普通事件有什么区别</h1><h2 id="普通事件"><a href="#普通事件" class="headerlink" title="普通事件"></a>普通事件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var btn = document.getElementById(&quot;hello&quot;);</div><div class="line">btn.onclick = function()&#123;</div><div class="line">	alert(1);</div><div class="line">&#125;</div><div class="line">btn.onclick = function()&#123;</div><div class="line">	alert(2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>只会执行alert 2</p>
+<h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var btn = document.getElementById(&quot;hello&quot;);</div><div class="line">btn.addEventListener(&quot;click&quot;,function()&#123;</div><div class="line">	alert(1);</div><div class="line">&#125;,false);</div><div class="line">btn.addEventListener(&quot;click&quot;,function()&#123;</div><div class="line">	alert(2);</div><div class="line">&#125;,false);</div></pre></td></tr></table></figure>
+<p>执行上面的代码会先alert 1 再 alert 2.<br>element.addEventListener(event, function, useCapture)<br>useCapture(可选。布尔值，指定事件是否在捕获或冒泡阶段执行。)<br>true - 事件句柄在捕获阶段执行<br>false- 默认。事件句柄在冒泡阶段执行<br>普通添加事件的方法不支持添加多个事件，最下面的事件会覆盖上面的，而事件绑定（addEventListener）方式添加事件可以添加多个。addEventLisntener还支持事件冒泡+事件捕获.</p>
+<hr>
+<h1 id="IE和标准下有哪些兼容性的写法"><a href="#IE和标准下有哪些兼容性的写法" class="headerlink" title="IE和标准下有哪些兼容性的写法"></a>IE和标准下有哪些兼容性的写法</h1><ol>
+<li>var event = event || window.event</li>
+<li>document.documentElement.clientWidth || document.body.clientWidth</li>
+<li>var target = event.srcElement||event.target</li>
+</ol>
+<hr>
+<h1 id="判断数组的方法"><a href="#判断数组的方法" class="headerlink" title="判断数组的方法"></a>判断数组的方法</h1><p>Array.isArray(数组)</p>
+<hr>
+<h1 id="null"><a href="#null" class="headerlink" title="null"></a>null</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a = null;</div><div class="line">alert(typeof a); //object</div></pre></td></tr></table></figure>
+<p>undefined == null; // true<br>undefined === null; // false</p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/29/js/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -207,6 +279,9 @@
 <hr>
 <h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><p>p:nth-child(odd)奇数 (even)偶数<br>a[rel=”abc”]属性选择器</p>
 <hr>
+<h1 id="CSS哪些属性不可继承"><a href="#CSS哪些属性不可继承" class="headerlink" title="CSS哪些属性不可继承"></a>CSS哪些属性不可继承</h1><p>border,padding,margin,width,height</p>
+<hr>
+<h1 id="和-和作用一样-当是后者由语义"><a href="#和-和作用一样-当是后者由语义" class="headerlink" title="和 和作用一样,当是后者由语义."></a><b>和<strong> <i>和<em>作用一样,当是后者由语义.</em></i></strong></b></h1><hr>
 
       
 
@@ -220,62 +295,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/06/29/html/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/28/hello-world/" class="archive-article-date">
-  	<time datetime="2017-06-28T11:35:33.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/28/hello-world/">展开全文 >></a>
         </p>
       
 
